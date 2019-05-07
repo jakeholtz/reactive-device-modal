@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import Input from "../presentational/Input.jsx";
 
+
+
 class FormContainer extends Component {
   constructor() {
     super();
@@ -15,6 +17,7 @@ class FormContainer extends Component {
 
   render() {
     const { inputText } = this.state;
+
     return (
       <form id="article-form">
         <Input
@@ -28,10 +31,6 @@ class FormContainer extends Component {
       </form>
     );
   }
-  
 }
-
-// const wrapper = document.getElementById("create-article-form");
-// wrapper ? ReactDOM.render(<FormContainer />, wrapper) : false;
 
 export default FormContainer;

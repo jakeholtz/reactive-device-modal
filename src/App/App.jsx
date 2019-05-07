@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import FormContainer from "./components/container/FormContainer.jsx";
+import styles from "./styles.less";
 
 export default class App extends Component {
   constructor(props) {
@@ -9,7 +10,7 @@ export default class App extends Component {
   }
 
   render() {
-    return <FormContainer />;
+    return <FormContainer styles={styles} />;
   }
 }
 
