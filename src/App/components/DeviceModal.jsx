@@ -60,7 +60,7 @@ export default class DeviceModal extends Component {
         <TextSection name="userNotifications"
                      title="User Notifications"
                      text="Adjust level of notifications shown to users on their device." />
-        <Radio name="userNotifications" options={['None', 'Notify On Protection Failure', 'Notify On Protection Change']}
+        <Radio name="userNotifications" options={['None', 'Notify on Protection Failure', 'Notify on Protection Change']}
                updateInput={this.updateInput} />
 
         {/* Device Identification */}
