@@ -1,17 +1,28 @@
 @nice-blue: #5B83AD;
 
 @font-face {
+  font-family: "light-web-font";
+  font-weight: lighter;
+  src: url("./assets/fonts/Light-webfont.woff2") format("woff2");
+}
+
+@font-face {
   font-family: "regular-web-font";
-  src: url("/assets/fonts/Regular-webfont.woff2") format("woff2");
+  font-weight: normal;
+  src: url("./assets/fonts/Regular-webfont.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "bold-web-font";
+  font-weight: bold;
+  src: url("./assets/fonts/Bold-webfont.woff2") format("woff2");
 }
 
 * {
   margin: 0;
   padding: 0;
-  font-family: 'regular-web-font' !important;
+  font-family: 'light-web-font';
 }
-
-
 
 .activate-modal-area {
   background-color: #EBF8FE;
@@ -23,7 +34,7 @@ button {
   padding: 8px 25px;
   margin: 25px 25px 25px 0px;
   font-size: 12px;
-  font-weight: bold;
+  font-family: "bold-web-font";
   border-radius: 2px;
   text-transform: uppercase;
   cursor: pointer;
@@ -78,6 +89,7 @@ button {
       background-color: yellow; 
       margin: 10px 0;
       font-size: 16px;
+      font-family: "bold-web-font";
     }
     .section-text {background-color: red; }
     .section-content {background-color: blue; }
