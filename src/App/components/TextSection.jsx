@@ -1,11 +1,7 @@
 import React, { Component } from "react";
 import styles from "../App.less";
 
-class Section extends Component {
-  constructor() {
-    super();
-  }
-
+export default class TextSection extends Component {
   render() {
     const { title, text } = this.props;
 
@@ -18,5 +14,3 @@ class Section extends Component {
     );
   }
 }
-
-export default Section;

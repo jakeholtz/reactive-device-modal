@@ -7,17 +7,55 @@
 }
 
 
+
+.open-modal-text {
+  background-color: #EBF8FE;
+  padding: 20px;
+}
+
+button {
+  outline: none;
+  padding: 8px 25px;
+  margin: 25px 25px 25px 0px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &.blue-button {
+    background-color: #009FDC;
+    color: white;
+    border: 1px solid #009FDC;
+  }
+  &.white-button {
+    background-color: white;
+    color: #009FDC;
+    border: 1px solid white;
+  }
+}
+
+.close-modal-x {
+  background-color: lime;
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  font-size: 21px;
+  cursor: pointer;
+}
+
 .modal {
   position: absolute;
   background-color: @nice-blue;
-  width: 700px;
+  width: 550px;
   height: 500px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 1px;
   z-index: 1;
-  padding: 15px;
+  padding: 25px;
+  color: #000019;
 
   &.open { display: block }
   &.closed { display: none }
@@ -30,17 +68,27 @@
     background-color: green;
     margin: 15px 0;
 
-    .section-title {background-color: yellow; }
+    .section-title {
+      background-color: yellow; 
+      margin: 10px 0;
+      font-size: 16px;
+    }
     .section-text {background-color: red; }
     .section-content {background-color: blue; }
   }
 
-  .submission-area {
+  .submission-container {
     background-color: magenta;
-  }
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+
+}
+
 
   h1 {
-    text-align: center;
+    color: #5B5A5E;
   }
 }
 

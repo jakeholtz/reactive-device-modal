@@ -1,25 +1,26 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import Modal from "./components/Modal.jsx";
+import DeviceModal from "./components/DeviceModal.jsx";
 import PropTypes from 'prop-types';
+
+/* App component functions as modal container. To integrate modal, all 
+   data in App needs to be reassigned to modals parent */
 
 export default class App extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      loading : true,
-      isModalOpen: true
-    };
-
+    this.state = { loading : true, isModalOpen: false };
     this.propTypes = { waitBeforeShow: PropTypes.number.isRequired };
-    this.toggleModal = this.toggleModal.bind(this);
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
   }
   
-  toggleModal() {
-    let { isModalOpen } = this.state;
-    console.log('a');
-    this.setState({ isModalOpen: !isModalOpen });
+  openModal() {
+    this.setState({ isModalOpen: true });
+  }
+
+  closeModal() {
+    this.setState({ isModalOpen: false });
   }
 
   componentDidMount() {
@@ -30,16 +31,26 @@ export default class App extends Component {
 
   render() {
     if (this.state.loading) return '';
+
     
     return (
       <div>
-        <Modal
+        <DeviceModal
           name="modalDeviceSettings"
           title="Modal Device Settings"
-          isOpen={ this.state.isModalOpen } />
+          isOpen={ this.state.isModalOpen } 
+          closeModal={ this.closeModal } />
+
+        <div class="open-modal-text">
+          <h1>Change Device Settings</h1>
           
-        <h1>Click To Open Modal</h1>
-        <button onClick={ this.toggleModal }>Click Here</button>
+          <button
+            onClick={ this.openModal }
+            className="blue-button">
+            Open Modal
+          </button>
+        </div>
+
       </div>
     );
   }
