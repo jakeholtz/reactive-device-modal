@@ -24,6 +24,19 @@ module.exports = {
         ]
       },
       {
+        test: /\.woff2$/,
+        use: {
+          loader: "url-loader",
+          options: {
+            limit: 5000,
+            mimetype: "application/font-woff",
+            name: "./fonts/[name].[ext]", // Output below ./fonts
+            publicPath: "../", // Take the directory into account
+          },
+
+        },
+      },
+      {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {

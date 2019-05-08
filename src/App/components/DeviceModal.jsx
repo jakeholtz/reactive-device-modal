@@ -32,7 +32,7 @@ export default class DeviceModal extends Component {
     return (
       <div className={ `modal ${ isOpen ? 'open' : 'closed' }` }>
 
-        <h1> { title } </h1>
+        <h2> { title } </h2>
 
         <div className="close-modal-x" onClick={ closeModal }>&#10005;</div>
 

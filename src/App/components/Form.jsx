@@ -20,7 +20,7 @@ export default class Form extends Component {
         <form>
           { options.map((option, index) => { 
             return (
-              <div key={index}>
+              <div key={index} className="radio-option">
                 <input type= { type } value={option} onChange={this.handleChange} />
                 <label htmlFor={index} >{ option }</label>
               </div>
