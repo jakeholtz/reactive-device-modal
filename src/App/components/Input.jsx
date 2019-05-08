@@ -13,11 +13,11 @@ export default class Input extends Component {
   }
 
   render() {
-    const { name, type, placeholder } = this.props;
+    const { name, type, placeholder, attemptedSubmit } = this.props;
 
     return (
         <form className="form-container">
-          <input className="form-input"
+          <input className={`form-input ${attemptedSubmit ? 'form-attempted' : ''}`}
                  name={name}
                  type={type}
                  placeholder={placeholder}

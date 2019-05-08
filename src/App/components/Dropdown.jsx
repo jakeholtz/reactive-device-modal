@@ -25,8 +25,8 @@ export default class Dropdown extends Component {
 
     return (
       <div className="dropdown-container">
-        <select onChange={this.handleChange}>
-          { options.map((opt, index) => <option key={index} value={opt}>{opt}</option> ) } 
+        <select className="dropdown-select" onChange={this.handleChange}>
+          { options.map((opt, index) => <option className="dropdown-option" key={index} value={opt}>{opt}</option> ) } 
         </select>
       </div>
     );

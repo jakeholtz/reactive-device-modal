@@ -12,15 +12,32 @@ export default class DeviceModal extends Component {
       /* User Submitted Data */
       organizationEmail: null,
       userNotifications: null,
-      deviceIdentification: null
+      deviceIdentification: null,
+
+      /* Attempted Submission */
+      attemptedSubmit: false
     }
     this.updateInput = this.updateInput.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   updateInput(property, value) {
-    const stateUpdates = {};
+    const stateUpdates = {attemptedSubmit: false};
     stateUpdates[property] = value;
-    this.setState( stateUpdates );
+    this.setState( stateUpdates  );
+  }
+
+  handleSubmit() {   /* Method for handling submit, capturing user input, and sending data to server */
+    const { organizationEmail, userNotifications, deviceIdentification } = this.state;
+    if (!organizationEmail || !userNotifications || ! deviceIdentification) {
+      return this.setState({attemptedSubmit: true});
+    }
+
+    /* When web server is set up add method HERE to send data above to web server -
+     * all data is currently captured in this.state
+    */
+
+    this.props.closeModal();
   }
 
   render() {
@@ -36,7 +53,7 @@ export default class DeviceModal extends Component {
         <TextSection name="organizationEmail" title="Organization Administrator's Email Address"
                      text="This email is for end users to generate problem reports within the Cisco
                      Security Connector app and send these reports to the administrator." />
-        <Input name="organizationEmail" type="email" placeholder="email"
+        <Input name="organizationEmail" type="email" placeholder="email" attemptedSubmit={this.state.attemptedSubmit}
               updateInput={this.updateInput} />
 
         {/* User Notifications */}
@@ -54,10 +71,7 @@ export default class DeviceModal extends Component {
               updateInput={this.updateInput} />
         
         <SubmissionOptions name="modalSubmission" confirmationText="Save"
-                           cancellatonText="Cancel" exitModal={ closeModal } />
-        <div> { this.state.organizationEmail } </div>
-        <div> { this.state.userNotifications } </div>
-        <div> { this.state.deviceIdentification } </div>
+                           cancellatonText="Cancel" exitModal={closeModal} handleSubmit={this.handleSubmit} />
 
       </div>
     );
