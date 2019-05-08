@@ -1,0 +1,51 @@
+@nice-blue: #5B83AD;
+@light-blue: @nice-blue + #111;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+.modal {
+  position: absolute;
+  background-color: @nice-blue;
+  width: 700px;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1px;
+  z-index: 1;
+  padding: 15px;
+
+  &.open { display: block }
+  &.closed { display: none }
+
+  h1 {
+    background-color: purple;
+  }
+
+  .section {
+    background-color: green;
+    margin: 15px 0;
+
+    .section-title {background-color: yellow; }
+    .section-text {background-color: red; }
+    .section-content {background-color: blue; }
+  }
+
+  .submission-area {
+    background-color: magenta;
+  }
+
+  h1 {
+    text-align: center;
+  }
+}
+
+.modal.open ~ * {
+  opacity: 0.5;
+}
+
+
