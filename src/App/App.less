@@ -1,14 +1,19 @@
 @nice-blue: #5B83AD;
-@light-blue: @nice-blue + #111;
+
+@font-face {
+  font-family: "regular-web-font";
+  src: url("/assets/fonts/Regular-webfont.woff2") format("woff2");
+}
 
 * {
   margin: 0;
   padding: 0;
+  font-family: 'regular-web-font' !important;
 }
 
 
 
-.open-modal-text {
+.activate-modal-area {
   background-color: #EBF8FE;
   padding: 20px;
 }
@@ -45,6 +50,7 @@ button {
 }
 
 .modal {
+  font-family: 'regular-web-font';
   position: absolute;
   background-color: @nice-blue;
   width: 550px;

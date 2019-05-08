@@ -31,7 +31,6 @@ export default class App extends Component {
 
   render() {
     if (this.state.loading) return '';
-
     
     return (
       <div>
@@ -41,7 +40,7 @@ export default class App extends Component {
           isOpen={ this.state.isModalOpen } 
           closeModal={ this.closeModal } />
 
-        <div class="open-modal-text">
+        <div className="activate-modal-area">
           <h1>Change Device Settings</h1>
           
           <button
@@ -50,7 +49,6 @@ export default class App extends Component {
             Open Modal
           </button>
         </div>
-
       </div>
     );
   }
