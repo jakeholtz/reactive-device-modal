@@ -21,7 +21,7 @@ export default class Dropdown extends Component {
   }
 
   render() {
-    const { type, options } = this.props;
+    const { options } = this.props;
 
     return (
       <div className="dropdown-container">

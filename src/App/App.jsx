@@ -9,18 +9,19 @@ import PropTypes from 'prop-types';
 export default class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { loading : true, isModalOpen: true };
+    this.state = { loading : true, isModalOpen: true, submissionSuccess: false };
     this.propTypes = { waitBeforeShow: PropTypes.number.isRequired };
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
   }
   
   openModal() {
-    this.setState({ isModalOpen: true });
+    this.setState({ isModalOpen: true, submissionSuccess: false });
   }
 
-  closeModal() {
-    this.setState({ isModalOpen: false });
+  closeModal(submissionSuccess) {
+    submissionSuccess = submissionSuccess === true ? true : false;
+    this.setState({ isModalOpen: false, submissionSuccess});
   }
 
   componentDidMount() {
@@ -48,6 +49,8 @@ export default class App extends Component {
             className="blue-button">
             Open Modal
           </button>
+
+          { this.state.submissionSuccess ? <div className="submitted-text">Submitted!</div> : '' }
         </div>
       </div>
     );

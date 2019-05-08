@@ -16,9 +16,11 @@
   src: url("./assets/fonts/Bold-webfont.woff2") format("woff2");
 }
 
+/* GLOBAL STYLES */
 * {
   margin: 0;
   padding: 0;
+  color: #58585B;
   font-family: 'light-web-font';
 }
 
@@ -28,28 +30,37 @@
   padding: 20px;
 }
 
+.submitted-text {
+  color: green;
+  font: 16px 'bold-web-font';
+}
+
 button {
   outline: none;
-  padding: 8px 25px;
-  margin: 25px 25px 25px 0px;
-  font-size: 12px;
-  font-family: "bold-web-font";
   border-radius: 2px;
+  margin: 25px 25px 25px 0px;
+  padding: 8px 25px;
+  font: 12px "bold-web-font";
   text-transform: uppercase;
   cursor: pointer;
 
   &.blue-button {
     background-color: #009FDC;
-    color: white;
     border: 1px solid #009FDC;
+    color: white;
   }
   &.white-button {
     background-color: white;
-    color: #009FDC;
     border: 1px solid white;
+    color: #009FDC;
   }
 }
 
+input::placeholder {
+  color: #999999
+}
+
+/* ICON STYLES */
 .close-modal-x {
   position: absolute;
   right: 15px;
@@ -60,27 +71,28 @@ button {
 }
 
 .modal {
-  border: 1px solid gray;
-  border-radius: 2px;
-  font-size: 14px;
-  font-family: 'regular-web-font';
   position: absolute;
-  background-color: white;
-  width: 550px;
   top: 50%;
   left: 50%;
+  width: 550px;
+  background-color: white;
+  box-shadow: 0px 0px 15px grey;
   transform: translate(-50%, -50%);
   border-radius: 1px;
-  z-index: 1;
   padding: 25px 25px 85px;
   color: #000019;
+  font: 14px 'regular-web-font';
+  z-index: 1;
+
 
   &.open { display: block }
   &.closed { display: none }
+  h1 { color: #5B5A5E; }
 
   h2 {
-    font-size: 24px;
     margin: 10px 0px;
+    font-size: 24px;
+    font-weight: 100 !important;
   }
 
   .section {
@@ -88,69 +100,71 @@ button {
 
     .section-title {
       margin: 10px 0;
-      font-size: 14px;
-      font-family: "bold-web-font";
+      font: 14px "bold-web-font";
     }
   }
 
-  .submission-container {
+  .radio-option {
+    margin: 15px 0;
+    label { margin-left: 15px; }
+  }
 
+  .form-input {
+    padding:7px;
+    font-size: 14px;
+    border: 1px solid #DDDDDD;
+    border-radius: 2px;
+    background-color: white;
+    box-shadow: 0 1px 0 #E9E9E9;
+    width: 59.5%
+  }
+
+  .form-attempted {
+    border: 1px solid indianred;
+  }
+
+  .dropdown-select {
+    border: 1px solid #DDDDDD;
+    background-color: white;
+    box-shadow: 0 1px 0 #E9E9E9;
+    font-size: 13.5px;
+    width: 62.5%
+  }
+
+  .submission-container {
     position: absolute;
     bottom: 0;
     right: 0;
     text-align: right;
-}
-
-  h1 {
-    color: #5B5A5E;
   }
-}
-
-.radio-option {
-  margin: 15px 0;
-  label { margin-left: 15px; }
 }
 
 .modal.open ~ * {
   opacity: 0.5;
 }
 
-.form-input {
-  padding:7px;
-  font-size: 13px;
-  border-radius: 2px;
-  background-color: white;
-  box-shadow: 0 1px 2px -2px gray;
-  width: 59.5%
-}
 
-.form-attempted {
-  border: 1px solid indianred;
-}
 
-.dropdown-select {
-  font-size: 13.5px;
-  border: 1px solid #DDDDDD;
-  background-color: white;
-  box-shadow: 0 1px 2px -2px gray;
-  width: 62.5%
-}
 
-h1 { background-color: purple; }
-h2 { background-color: blue; }
-.section  { background-color: green; }
-.close-modal-x {  background-color: red; }
-.submission-container { background-color: orange; }
-.section-title {background-color: yellow; }
-.section-text {background-color: pink; }
-.section-content {background-color: magenta; }
-.dropdown-container { background-color: aqua; }
-.aaa { background-color: darkblue; }
-.bbb { background-color: darkgreen; }
-.ccc { background-color: darkred }
-.form-radio-container { background-color: royalblue }
-.radio-container { background-color: seagreen }
-.radio-input { background-color: indianred }
-.radio-label { background-color: darkslategray }
-.form-container { background-color: gold }
-.form-input { background-color: silver }
+
+
+
+
+// h1 { background-color: purple; }
+// h2 { background-color: blue; }
+// .section  { background-color: green; }
+// .close-modal-x {  background-color: red; }
+// .submission-container { background-color: orange; }
+// .section-title {background-color: yellow; }
+// .section-text {background-color: pink; }
+// .section-content {background-color: magenta; }
+// .dropdown-container { background-color: aqua; }
+// .aaa { background-color: darkblue; }
+// .bbb { background-color: darkgreen; }
+// .ccc { background-color: darkred }
+// .form-radio-container { background-color: royalblue }
+// .radio-container { background-color: seagreen }
+// .radio-input { background-color: indianred }
+// .radio-label { background-color: darkslategray }
+// .form-container { background-color: gold }
+// .form-input { background-color: silver }

@@ -14,6 +14,7 @@ export default class Input extends Component {
 
   render() {
     const { name, type, placeholder, attemptedSubmit } = this.props;
+    const { inputValue } = this.state;
 
     return (
         <form className="form-container">
