@@ -35,8 +35,8 @@ export default class App extends Component {
     return (
       <div>
         <DeviceModal
-          name="modalDeviceSettings"
-          title="Modal Device Settings"
+          name="mobileDeviceSettings"
+          title="Mobile Device Settings"
           isOpen={ this.state.isModalOpen } 
           closeModal={ this.closeModal } />
 

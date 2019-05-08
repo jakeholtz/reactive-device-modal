@@ -24,6 +24,7 @@
 
 .activate-modal-area {
   background-color: #EBF8FE;
+  height: calc(100vh - 40px);
   padding: 20px;
 }
 
@@ -50,18 +51,21 @@ button {
 }
 
 .close-modal-x {
-  background-color: lime;
   position: absolute;
-  right: 25px;
-  top: 25px;
+  right: 15px;
+  top: 15px;
   font-size: 21px;
+  line-height: 21px;
   cursor: pointer;
 }
 
 .modal {
+  border: 1px solid gray;
+  border-radius: 2px;
+  font-size: 14px;
   font-family: 'regular-web-font';
   position: absolute;
-  background-color: #5B83AD;
+  background-color: white;
   width: 550px;
   height: 500px;
   top: 50%;
@@ -75,41 +79,48 @@ button {
   &.open { display: block }
   &.closed { display: none }
 
-  h1 {
-    background-color: purple;
+  h2 {
+    font-size: 24px;
+    margin: 10px 0px;
   }
 
   .section {
-    background-color: green;
     margin: 15px 0;
 
     .section-title {
-      background-color: yellow; 
       margin: 10px 0;
-      font-size: 16px;
+      font-size: 14px;
       font-family: "bold-web-font";
     }
-    .section-text {background-color: red; }
-    .section-content {background-color: blue; }
   }
 
   .submission-container {
-    background-color: magenta;
+
     position: absolute;
     bottom: 0;
     right: 0;
     text-align: right;
-
 }
-
 
   h1 {
     color: #5B5A5E;
   }
 }
 
+.radio-option {
+  margin: 15px 0;
+  label { margin-left: 15px; }
+}
+
 .modal.open ~ * {
   opacity: 0.5;
 }
 
-
+// h1 { background-color: purple; }
+// h2 { background-color: aqua; }
+// .section  { background-color: green; }
+// .close-modal-x {  background-color: lime; }
+// .submission-container { background-color: magenta; }
+// .section-title {background-color: yellow; }
+// .section-text {background-color: red; }
+// .section-content {background-color: blue; }
