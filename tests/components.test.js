@@ -27,6 +27,17 @@ describe('Components should render correctly in "debug" mode', () => {
   });
 });
 
+describe('Input Component', () => {
+  const inputComponent = <Radio placeholder="email" onChange={() => {}} debug />;
+
+  it('Should include placeholder in props', () => {
+    expect(inputComponent.props.placeholder).toEqual('email');
+  });
+  it('Should have method to handle input change', () => {
+    expect(typeof inputComponent.props.onChange).toEqual('function');
+  });
+});
+
 
 describe('Radio Component', () => {
   const options = ['A', 'B', 'C'];
