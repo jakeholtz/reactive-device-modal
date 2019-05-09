@@ -32,3 +32,5 @@ reactive-device-modal/ <- ROOT
 1) Make sure you've gone through the setup instructions
 2) Run `npm run test` in the root directory. This will run Jest / Enzyme unit tests
 
+# Author
+BUILT BY JAKE HOLTZ - 5/7/2019 & 5/8/2019
