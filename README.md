@@ -6,7 +6,7 @@
 ````
 reactive-device-modal/ <- ROOT
   src/
-  |- index.html ______________________________# HTML Entry point
+  |- index.html _____________________________ # HTML Entry point
   |- index.js _______________________________ # JS Entry Point 
   |- App/ ___________________________________ # Application
   |  |- App.jsx _____________________________ # Main Application File
@@ -16,7 +16,7 @@ reactive-device-modal/ <- ROOT
   |    |- Input.jsx _________________________ # Text Input Component (Reuseable)
   |    |- Radio.jsx _________________________ # Radio Input Component (Reuseable)
   |    |- SubmissionOptions.jsx _____________ # Modal Submission Buttons Component (Reuseable)
-  |    |- TextSection.jsx ________________ __ # Text Section / Paragraph Component (Reuseable)
+  |    |- TextSection.jsx ___________________ # Text Section / Paragraph Component (Reuseable)
   
   NOTE: All components except DeviceModal.jsx and App.jsx are meant to be reuseable.
 ````
