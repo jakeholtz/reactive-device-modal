@@ -36,4 +36,4 @@ reactive-device-modal/ <- ROOT
 ![image](https://github.com/jakeholtz/reactive-device-modal/blob/master/src/App/assets/images/screenshot/Screenshot.png)
 
 # Author
-BUILT BY JAKE HOLTZ - 5/7/2019 & 5/8/2019
+Built by Jake Holtz - 5/7/2019 & 5/8/2019
