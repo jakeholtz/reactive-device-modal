@@ -42,15 +42,15 @@ export default class App extends Component {
           closeModal={ this.closeModal } />
 
         <div className="activate-modal-area">
-          <h1>Change Device Settings</h1>
+          <h1>Device Settings</h1>
           
           <button
             onClick={ this.openModal }
             className="blue-button">
-            Open Modal
+            Change
           </button>
 
-          { this.state.submissionSuccess ? <div className="submitted-text">Submitted!</div> : '' }
+          { this.state.submissionSuccess ? <div className="submitted-text">Device Settings Changed!</div> : '' }
         </div>
       </div>
     );

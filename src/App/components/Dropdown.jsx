@@ -43,7 +43,7 @@ export default class Dropdown extends Component {
           (<div className="dropdown-content">
             { options.map((opt, index) => <div className={`dropdown-item ${opt === this.state.inputValue ? 'selected-item' : ''}`}
                                                onClick={() => this.handleClick(opt)} key={index}>{opt}
-                                            <span class="dropdown-check">&#10003;</span>
+                                            <span className="dropdown-check">&#10003;</span>
                                           </div> ) }  
           </div>) : ''
       }
