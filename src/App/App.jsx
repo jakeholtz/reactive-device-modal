@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 export default class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { loading : true, isModalOpen: true, submissionSuccess: false };
+    this.state = { loading : true, isModalOpen: false, submissionSuccess: false };
     this.propTypes = { waitBeforeShow: PropTypes.number.isRequired };
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
