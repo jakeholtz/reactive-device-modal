@@ -33,7 +33,7 @@ export default class Radio extends Component {
                 <div className="radio-option" key={identifier} >
                   <input className="radio-input" name={this.props.name} type="radio" value={option}
                          checked={this.state.inputValue ? this.state.inputValue === option : !index}
-                         onChange={ this.handleChange } />
+                         onChange={this.handleChange} />
                   <label className="radio-label" htmlFor={identifier}>{option}</label>
                 </div>
               );
