@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components rendering correctly in "debug" mode <Dropdown /> component should render 1`] = `ShallowWrapper {}`;
+exports[`Components should render correctly in "debug" mode <Dropdown /> component should render 1`] = `ShallowWrapper {}`;
 
-exports[`Components rendering correctly in "debug" mode <Input /> component should render 1`] = `ShallowWrapper {}`;
+exports[`Components should render correctly in "debug" mode <Input /> component should render 1`] = `ShallowWrapper {}`;
 
-exports[`Components rendering correctly in "debug" mode <Radio /> component should render 1`] = `ShallowWrapper {}`;
+exports[`Components should render correctly in "debug" mode <Radio /> component should render 1`] = `ShallowWrapper {}`;
 
-exports[`Components rendering correctly in "debug" mode <TextSection /> component should render 1`] = `ShallowWrapper {}`;
+exports[`Components should render correctly in "debug" mode <TextSection /> component should render 1`] = `ShallowWrapper {}`;
