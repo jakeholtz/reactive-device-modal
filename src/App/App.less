@@ -109,6 +109,7 @@ input::placeholder {
   .radio-option {
     margin: 15px 0;
     label { margin-left: 15px; }
+    .radio-input { cursor: pointer; }
   }
 
   .form-input {
@@ -180,6 +181,23 @@ input::placeholder {
     z-index: -1;
   };
 
+  .dropdown-check {
+    display: none;
+  }
+
+  .selected-item {
+    font-family: "bold-web-font";
+
+    .dropdown-check {
+      display: inline;
+      position: absolute;
+      left: 0;
+      font-family: Arial;
+      width: 35px;
+      text-align: center;
+    }
+  }
+
   .submission-container {
     position: absolute;
     bottom: 0;
@@ -198,7 +216,7 @@ input::placeholder {
 // .close-modal-x {  background-color: red; }
 // .submission-container { background-color: orange; }
 // .section-title {background-color: yellow; }
-// .section-text {background-color: pink; }
+// .section-text {background-color: pink;
 // .section-content {background-color: magenta; }
 // .dropdown-container { background-color: aqua; }
 // .aaa { background-color: darkblue; }

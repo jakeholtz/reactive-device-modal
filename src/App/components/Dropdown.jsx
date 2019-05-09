@@ -4,7 +4,6 @@ export default class Dropdown extends Component {
   constructor(props) {
     super(props);
     this.state = {isOpen: false};
-    this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.toggleDropdown = this.toggleDropdown.bind(this);
 
@@ -21,11 +20,6 @@ export default class Dropdown extends Component {
     const { isOpen } = this.state; 
     this.state = { inputValue, isOpen };
     this.props.updateInput(this.props.name, inputValue);
-  }
-
-  handleChange(event) {
-    this.setState({inputValue: event.target.value});
-    this.props.updateInput(this.props.name, event.target.value);
   }
 
   handleClick(inputValue) {
@@ -47,7 +41,10 @@ export default class Dropdown extends Component {
       </div>
       { this.state.isOpen ? 
           (<div className="dropdown-content">
-            { options.map((opt, index) => <div className="dropdown-item" onClick={() => this.handleClick(opt)} key={index}>{opt}</div> ) }  
+            { options.map((opt, index) => <div className={`dropdown-item ${opt === this.state.inputValue ? 'selected-item' : ''}`}
+                                               onClick={() => this.handleClick(opt)} key={index}>{opt}
+                                            <span class="dropdown-check">&#10003;</span>
+                                          </div> ) }  
           </div>) : ''
       }
     </div>

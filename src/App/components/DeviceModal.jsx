@@ -70,10 +70,6 @@ export default class DeviceModal extends Component {
         <SubmissionOptions name="modalSubmission" confirmationText="Save"
                            cancellatonText="Cancel" exitModal={closeModal} handleSubmit={this.handleSubmit} />
 
-       {/* <div> { this.state.organizationEmail } </div>
-       <div> { this.state.userNotifications } </div>
-       <div> { this.state.deviceIdentification } </div> */}
-
       </div>
     );
   }
